@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Complet : Hébergement Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900">Serveur</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#fonctionnement" class="hover:text-blue-600 transition">Fonctionnement</a>
+                    <a href="#types" class="hover:text-blue-600 transition">Types d'offres</a>
+                    <a href="#technique" class="hover:text-blue-600 transition">Spécifications</a>
+                    <a href="#securite" class="hover:text-blue-600 transition text-blue-600">Sécurité</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative py-20 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                Tout savoir sur <span class="text-blue-600">l'hébergement serveur</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Comprendre l'infrastructure qui propulse vos applications web, des bases du protocole HTTP aux architectures Cloud complexes.
+            </p>
+        </div>
+    </header>
+
+    <section id="types" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Les solutions d'hébergement</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Mutualisé</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Ressources partagées entre plusieurs sites. Économique et idéal pour les débutants.</p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">VPS</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Partition virtuelle isolée. Parfait pour les applications en développement (FastAPI).</p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Dédié</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Machine physique exclusive. Contrôle total et puissance brute pour gros projets.</p>
+                </div>
+
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-sky-50 text-sky-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Cloud</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Infrastructure distribuée. Haute disponibilité et scalabilité à la demande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technique" class="py-20 bg-slate-900 text-white rounded-[3rem] mx-4 my-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 italic text-blue-400">Performances & Hardware</h2>
+                    <p class="text-slate-400 mb-8">Pour garantir la réactivité de vos outils (analyses financières, IA, etc.), la configuration matérielle est le pilier central.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                            <span><strong>SSD NVMe :</strong> Vitesse de lecture/écriture ultra-rapide.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                            <span><strong>RAM Haute Fréquence :</strong> Gestion fluide des bases de données SQLite/PostgreSQL.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1"></i>
+                            <span><strong>CPU Multi-cœurs :</strong> Traitement parallèle des requêtes lourdes.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                    <h4 class="text-sm uppercase tracking-widest text-slate-500 mb-6 font-bold">Résumé des spécifications</h4>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="pb-4 font-semibold">Composant</th>
+                                <th class="pb-4 font-semibold text-right">Standard Recommandé</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-300">
+                            <tr class="border-b border-slate-700/50">
+                                <td class="py-4">Stockage</td>
+                                <td class="py-4 text-right">SSD (Min 20 Go)</td>
+                            </tr>
+                            <tr class="border-b border-slate-700/50">
+                                <td class="py-4">Mémoire</td>
+                                <td class="py-4 text-right">2 Go - 8 Go RAM</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4">Système</td>
+                                <td class="py-4 text-right">Linux (Ubuntu/Debian)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 mt-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm italic">
+                &copy; 2026 Serveur Guide - Architecture & Déploiement Applicatif.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
